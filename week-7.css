@@ -1,0 +1,177 @@
+button{
+    padding: 5px;
+    margin: 10px;
+    border: none;
+    border-radius: solid #242E49;
+    color: #56e614;
+    font-size: 25px;
+    background-color: #37415c;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0,123, 255, 0.5);
+}
+h1{
+    font-family: arial;
+    font-size: larger;
+    text-align: justify;
+    padding: 5px;
+    margin: 20px;
+    color: skyblue;
+}
+h2{
+    font: 100;
+    color: blueviolet;
+
+}
+.task{
+    border: solid burlywood 5px;
+    border-radius: 20px;
+}
+.pulse-button:hover{
+    background-color: aqua;
+    box-shadow: 0 0 10px rgba(0,255, 234, 0.6);
+}
+body{
+    background-color: #54162B;
+}
+.glow:hover{
+    transform: scale(0.96);
+    box-shadow: 0 0 10px rgba(0, 123,255, 0.8);
+}
+.rotate-button{
+    animation:rotate 4s linear infinite;
+}
+.pulsate-button{
+    animation: pulsate 1.6s ease-in-out infinite alternate;
+}
+.glow{
+    border-top: 8px solid #007bff;
+    width: 80px;
+    animation: spin 4s linear infinite;
+
+}
+label {
+    display:flex;
+    margin-top: 5px;
+    font-weight: bold;
+    color:#e5c9d7;
+
+}
+p#ScopeResults {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #34495e;
+}
+
+
+input[type="number"] {
+    width: 25%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[onclick="CalculateArea()"] {
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+p#Result {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+@keyframes rotate{
+    0%{transform: (0deg);}
+    100%{transform:rotate(360deg);}
+}
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(0, 123, 255, 0.8),
+                    0 0 40px rgba(0, 123, 255, 0.6);
+    }
+    100% {
+        transform: scale(1); 
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); 
+    }
+}
+@keyframes spin{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal.visible {
+    display: block;
+}
+.card {
+    width: 200px;
+    height: 200px;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transitions */
+}
+
+.animate-card {
+    transform: scale(1.5) rotate(360deg); 
+    opacity: 0.5; 
+}
+
+.button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #218838;
+}
+.task{
+    height: auto;
+    width: 500px;
+    background-color:#0b1b32;
+    text-align: left;
+    padding-top: 1px;
+    border-radius: 20px;
+    border: solid black;
+    margin: auto;
+    padding-left: 5px;
+
+}

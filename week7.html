@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3  and transitions</title>
+</head>
+<body>
+    <h1>dynamic and interactive webpage</h1>
+    <button id="dynamic-button" class="dynamic-button">click me</button>
+    <button class="rotate-button">rotate button</button>
+    <button class="pulse-button">pulse button</button>
+    <style>
+        button{
+            font: 200;
+            font-family: Arial, Helvetica;
+            font-size: large;
+            color: rgb(152, 153, 156);
+            background-color: rgb(115, 17, 206);
+            padding: 7px 15px;
+            margin: 15px;
+            border-radius: 15px;
+            cursor: pointer;
+            animation: pulse ease-in-out infinite alternate;
+        }
+        h1{
+            text-align: center;
+
+        }
+        button:hover{
+            transition: ease-in-out 0.3ms;
+            background: color hsl(129, 9%, 84%);;
+            color: rgb(41, 187, 126);
+            box-shadow: 0 0 7px 3px #0e2397;
+        }
+        .rotate-button{
+            animation: spin 3.0s linear infinite;
+
+        }
+        .pulse-button{
+            animation: fadein 1.s ease-in-out infinite alternate;
+            opacity: 1;
+        }
+        @keyframes spin{
+            0%{transform: rotate(0deg);}
+            100%{transform: rotate(360deg);}
+        }
+        @keyframes fadein{
+            0%{opacity: 1;}
+            50%{opacity: 0.4;}
+            100%{opacity: 1;}
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const button = document.querySelector('.fade-pulsate-button');
+        button.addEventListener('animationend', function(event) {
+        if (event.animationName === 'fadeInPulsate') {
+        button.classList.add('pulsating'); // Add the pulsating class after fadeInPulsate finishes
+        }
+        });           
+        });
+    </script>
+</body>
+</html>
